@@ -26,41 +26,37 @@ public class Main {
 
     }
     public static int action(int choice){
-        switch(choice){
-            case 1 :
-                try{
+        switch (choice) {
+            case 1 -> {
+                try {
                     AccountManager.openAccount();
-                }catch (InvalidAccountTypeException e){
+                } catch (InvalidAccountTypeException e) {
                     System.out.println(e.getMessage());
                 }
-
-                break;
-            case 2 :
-                try{
+            }
+            case 2 -> {
+                try {
                     AccountManager.manageAccount();
-                }catch (UnAuthorisedUserException e){
+                } catch (UnAuthorisedUserException e) {
                     System.out.println(e.getMessage());
                 }
-                break;
-            case 3 :
-                try{
+            }
+            case 3 -> {
+                try {
                     AccountManager.printStatement();
-                }catch (Exception e){
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
-                break;
-            case 4 :
-                try{
+            }
+            case 4 -> {
+                try {
                     AccountManager.transactMoney();
-                }catch(UnAuthorisedUserException e){
+                } catch (UnAuthorisedUserException e) {
                     System.out.println(e.getMessage());
                 }
-                break;
-            case 5 :
-                System.out.println(5);
-                break;
-            default :
-                System.out.println("❌ invalid choice");
+            }
+            case 5 -> System.out.println(5);
+            default -> System.out.println("❌ invalid choice");
         }
         return choice;
     }
