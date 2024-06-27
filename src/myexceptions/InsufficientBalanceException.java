@@ -1,4 +1,10 @@
-package exceptions;
+package myexceptions;
 
-public class InsufficientBalanceException {
+import javax.naming.InterruptedNamingException;
+
+public class InsufficientBalanceException extends Exception{
+    public InsufficientBalanceException(String msg){
+        super(msg);
+    }
+
 }

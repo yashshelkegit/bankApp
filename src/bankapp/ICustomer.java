@@ -1,7 +1,6 @@
 package bankapp;
 
-public interface User {
-    void openAccount();
-    void closeAccount();
-    void getUserInfo();
+public interface ICustomer {
+    void openAccount(String name, String password, double initialBalance, AccountType type);
+    void getUserInfo(String id);
 }

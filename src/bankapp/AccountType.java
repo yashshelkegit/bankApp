@@ -1,2 +1,5 @@
-package bankapp;public enum AccountType {
+package bankapp;
+
+public enum AccountType {
+    SAVINGS, CURRENT, LOAN
 }

@@ -1,2 +1,7 @@
-package myexceptions;public class InvalidAccountTypeException {
+package myexceptions;
+
+public class InvalidAccountTypeException extends Exception{
+    public InvalidAccountTypeException(String msg){
+        super(msg);
+    }
 }
